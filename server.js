@@ -10,6 +10,8 @@ const app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+app.use(express.static("client/build"));
+
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/mern-stack", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
