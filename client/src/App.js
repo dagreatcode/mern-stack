@@ -5,15 +5,13 @@ import axios from "axios";
 
 function App() {
   useEffect(() => {
-    console.log("Make a API call");
-    axios
-      .get("/api/config")
-      .then((response) => {
-        console.log(response);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+    console.log("Make a API call please");
+    axios.get("/api/config").then((response)=>{
+      console.log(response);
+    })
+    .catch((err)=>{
+      console.log(err);
+    });
   }, []);
 
   return (
