@@ -26,8 +26,8 @@ connection.on("connected", () => {
 });
 
 connection.on("error", (err) => {
-    console.log("Mongoose connection error: ", err);
-  });
+  console.log("Mongoose connection error: ", err);
+});
 
 app.get("/api/config", (req, res) => {
   res.json({
@@ -36,7 +36,7 @@ app.get("/api/config", (req, res) => {
 });
 
 app.get("*", (req, res) => {
-    res.sendFile(path.json(__dirname, "./client/build/index.html"))
+  res.sendFile(path.json(__dirname, "./client/build/index.html"));
 });
 
 app.listen(PORT, () => {
